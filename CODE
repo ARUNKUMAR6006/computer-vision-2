@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
-img = cv2.imread("AK.jpg")
+img = cv2.imread("AK.jpg.jpg")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 plt.imshow(img)
@@ -29,7 +29,7 @@ for i, im in enumerate(images):
 for i, im in enumerate(images):
     gray = cv2.cvtColor(im, cv2.COLOR_RGB2GRAY)
     edges = cv2.Canny(gray, 100, 200)
-    
+
     plt.figure()
     plt.imshow(edges, cmap='gray')
     plt.title(f"Edges at Pyramid Level {i}")
